@@ -4,62 +4,60 @@
 
 /**
 
- * main - check the code.
+ * print_sign - Check main
 
- *
+ * @n: An input number
 
- * Return: Always 0.
+ * Description: function that prints the sign of a number
+
+ * Return: 1 if positive
+
+ * 0 if number is 0
+
+ * -1 if number is negative
 
  */
 
-int main(void)
+int print_sign(int n)
 
 {
 
-    int r;
+	int value;
 
 
 
-    r = print_sign(98);
+	if (n > 0)
 
-    _putchar(',');
+	{
 
-    _putchar(' ');
+		value = 1;
 
-    _putchar(r + '0');
+		_putchar('+');
 
-    _putchar('\n');
+	}
 
-    r = print_sign(0);
+	else if (n == 0)
 
-    _putchar(',');
+	{
 
-    _putchar(' ');
+		value = 0;
 
-    _putchar(r + '0');
+		_putchar('0');
 
-    _putchar('\n');
+	}
 
-    r = print_sign(0xff);
+	else
 
-    _putchar(',');
+	{
 
-    _putchar(' ');
+		value = -1;
 
-    _putchar(r + '0');
+		_putchar('-');
 
-    _putchar('\n');
+	}
 
-    r = print_sign(-1);
 
-    _putchar(',');
 
-    _putchar(' ');
-
-    _putchar(r + '0');
-
-    _putchar('\n');
-
-    return (0);
+	return (value);
 
 }
